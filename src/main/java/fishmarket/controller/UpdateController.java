@@ -30,10 +30,6 @@ public class UpdateController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/member/myInfo.jsp");
-		view.forward(request, response);
 	}
 
 	/**
@@ -42,9 +38,9 @@ public class UpdateController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
-		String memberId = request.getParameter("username");
-		String memberPw = request.getParameter("password");
-		String memberEmail = request.getParameter("email");
+		String memberId = request.getParameter("member-id");
+		String memberPw = request.getParameter("member-pw");
+		String memberEmail = request.getParameter("member-email");
 		String memberPhone = request.getParameter("member-phone");
 		String memberAddress = request.getParameter("member-address");
 		MemberService service = new MemberService();

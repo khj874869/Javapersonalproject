@@ -17,6 +17,19 @@
 <link rel="stylesheet" href="../resource/footer.css">
 <link rel="stylesheet" href="../resource/slider.css">
 <link rel="stylesheet" href="../resource/notice.css">
+
+<style>
+		textarea {
+			width: 100%;
+			height: 200px;
+			padding: 10px;
+			box-sizing: border-box;
+			border: solid 2px #1E90FF;
+			border-radius: 5px;
+			font-size: 16px;
+			resize: both;
+		}
+	</style>
 </head>
  <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
  

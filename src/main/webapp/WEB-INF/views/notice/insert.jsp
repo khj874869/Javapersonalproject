@@ -18,6 +18,11 @@
 <link rel="stylesheet" href="../resource/footer.css">
 <link rel="stylesheet" href="../resource/slider.css">
 <link rel="stylesheet" href="../resource/notice.css">
+<style >
+ a:link { color: white; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color: blue; text-decoration: underline;}
+</style>
 </head>
 <body>
  <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
@@ -29,16 +34,25 @@
 	<fieldset>
 		<legend>공지사항 작성</legend>
 			<ul>
+			<table>
+			<tr>
+				<td>
 			<li style= "list-style:none">
 				<label >제목</label>
 				<input type="text" id="" name="noticeSubject">
 			</li>
+				</td>
+			</tr>
+			<tr>
+				<td>
 				<li style= "list-style:none">
 				<label>내용</label>
 				<textarea rows="30" cols="80" name="noticeContent"></textarea>
 				</li>
+				</td>
+				</tr>
 			</ul>
-
+			</table>
 	</fieldset>
 	<div>
 		<input type ="submit" value="작성">

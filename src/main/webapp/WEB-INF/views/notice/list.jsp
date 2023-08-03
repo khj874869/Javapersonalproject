@@ -18,11 +18,7 @@
 <link rel="stylesheet" href="../resource/footer.css">
 <link rel="stylesheet" href="../resource/slider.css">
 <link rel="stylesheet" href="../resource/notice.css">
-<style >
- a:link { color: red; text-decoration: none;}
- a:visited { color: black; text-decoration: none;}
- a:hover { color: blue; text-decoration: underline;}
-</style>
+
 </head>
 <body>
  <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
@@ -57,7 +53,13 @@
 					<td>${notice.viewCount}</td>
 				</tr>
 			</c:forEach>
-		
+			<tr>
+					<td colspan="5" align="center">
+					${pageNavi }
+<!-- 						<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> -->
+<!-- 						<a href="#">6</a> <a href="#">7</a> <a href="#">8</a> <a href="#">9</a> <a href="#">10</a> -->
+					</td>
+				</tr>
 					
 		</tbody>
 	</table>

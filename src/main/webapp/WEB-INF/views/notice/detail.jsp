@@ -18,7 +18,11 @@
 <link rel="stylesheet" href="../resource/footer.css">
 <link rel="stylesheet" href="../resource/slider.css">
 <link rel="stylesheet" href="../resource/notice.css">
-
+<style >
+ a:link { color: white; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color: blue; text-decoration: underline;}
+</style>
 </head>
 <body>
  <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
@@ -73,7 +77,7 @@
 								</td>
 	</tr>
 	 <div id ="tablebtn">
-	<button class="editBtn"><a href="/notice/list.do">목록으로 이동하기</a></button>
+	<button class="editBtn"><a href="/notice/list.do?currentPage=${noticeNo %100}">목록으로 이동하기</a></button>
 	<button class="editBtn" id="eidt"><a href="/notice/modify.do?noticeNo=${notice.noticeNo }">수정하기</a></button>
 	<button class="editBtn"  id="delete"><a href="javascript:void(0);" onclick="deletecheck();">삭제하기</a></button>
 		 </div>
@@ -84,9 +88,9 @@
 
 </main>
 </body>
-	<script >
+	<script>
 		const deletecheck = () = > {
-				const noticeNo= '${notice.noticeNo}';
+				const noticeNo= ${notice.noticeNo};
 				if(confirm("정말 삭제하시겠습니까?")){
 					location.href="/notice/delete.do?noticeNo="+noticeNo;
 					

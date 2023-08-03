@@ -44,7 +44,7 @@
       <br><br>
       <div class="collection"><p>구매수량  :<button class="plus">+</button><input type="number" class="numbers" value="1" min="1"><button class="minus">-</button></div></p>
       </li>
-      <li><p class="priceTotal" >총 금액 : ₩400,000</p></li>
+      <li><span>총 금액: ₩<span id="totalPrice">400000</span></span></li>
       <input type="button" id ="productBtn"value="구매하기"><input type="button" id="productBtn2"value="장바구니">
   </ol>
   </div>
@@ -109,6 +109,8 @@ commenDatatForm.addEventListener('submit', function(event) {
 var quantityValue = document.querySelector('.numbers');
 var plusButton = document.querySelector('.plus');
 var minusButton = document.querySelector('.minus');
+var totalPriceElement = document.getElementById('totalPrice');
+
 function upQuantity(change) {
   var charge = Number(quantityValue.value);
   charge += change;
@@ -116,6 +118,7 @@ function upQuantity(change) {
     charge = 1;
   }
   quantityValue.value = charge;
+  updateTotalPrice();
 }
 
 plusButton.addEventListener('click', function() {
@@ -124,11 +127,13 @@ plusButton.addEventListener('click', function() {
 minusButton.addEventListener('click', function() {
   upQuantity(-1);
 });
-var amountcharge = getelementId('priceTotal');
-if(plusButton){
-	
-}
-
+function updateTotalPrice() {
+	  var charge = Number(quantityValue.value);
+	  var pricePerItem = 1; 
+	  var totalPrice = charge * pricePerItem;
+	  totalPriceElement.textContent = totalPrice;
+	}
+updateTotalPrice();
 
 </script>
 </html>

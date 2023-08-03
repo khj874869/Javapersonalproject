@@ -40,7 +40,7 @@ public class NoticeDAO {
 		ResultSet rset = null;
 		Notice notice = null;
 		List<Notice> nList = new ArrayList<Notice>();
-		String query = "SELECT * FROM NOTICE ORDER BY NOTICE_DATE ASC";
+		String query = "SELECT * FROM NOTICE ORDER BY NOTICE_NO DESC";
 		try {
 			pstmt = conn.prepareStatement(query);
 			rset = pstmt.executeQuery();	// 누락 주의, 결과값 받기 주의
@@ -149,6 +149,69 @@ public class NoticeDAO {
 		
 		
 		return result;
+	}
+
+	public List<Notice> selectNoticeList(Connection conn, int currentPage) {
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY NOTICE_NO DESC) ROW_NUM, NOTICE.* FROM NOTICE) WHERE ROW_NUM BETWEEN ? AND ?";
+		List<Notice> nList = new ArrayList<Notice>();
+		int recordCountPerPage= 15;
+		int start = currentPage*recordCountPerPage - (recordCountPerPage-1);
+		int end = currentPage*recordCountPerPage;
+		try {
+			pstmt=conn.prepareStatement(query);
+			pstmt.setInt(1, start);
+			pstmt.setInt(2, end);
+			rset = pstmt.executeQuery();
+			while(rset.next()) {
+				Notice notice = rsetToNotice(rset);
+				nList.add(notice);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return nList;
+	}
+
+	public String generatePageNavi(int currentPage) {
+		int totalCount = 4;
+		int recordCountPerPage = 15;
+		int naviTotalCount =0;
+		if(totalCount%recordCountPerPage>0) {
+			naviTotalCount = totalCount /  recordCountPerPage +1;
+		}else {
+			naviTotalCount = totalCount /recordCountPerPage;
+		}
+		int naviCountPerPage =10;
+		int startNavi =((currentPage-1)/naviCountPerPage)*naviCountPerPage +1;
+		int endNavi = startNavi + naviCountPerPage -1;
+		if(endNavi>naviTotalCount) {
+			endNavi = naviTotalCount;
+		}
+		boolean needPrev = true;
+		boolean needNext = true;
+		if(startNavi ==1) {
+			needPrev = false;
+		}
+		if(endNavi == naviTotalCount) {
+			needNext=false;
+		}
+		StringBuilder result = new StringBuilder();
+		if(needPrev) {
+			result.append("<a href='/notice/list.do?currentPage="+(startNavi-1)+"'>[이전]</a>");
+		}
+		for(int i = startNavi; i<=endNavi;i++) {
+			result.append("<a href='/notice/list.do?currentPage="+i+"'>"+i+"</a>&nbsp;&nbsp;");
+		}
+		if(needNext) {
+			result.append("<a href='/notice/list.do?currentPage="+(endNavi+1)+"'>[다음]</a>");
+			
+			}
+		return result.toString();
+
 	}
 }
 

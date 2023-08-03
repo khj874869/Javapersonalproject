@@ -45,7 +45,7 @@
       <br><br>
       <div class="collection"><p>구매수량  :<button class="plus">+</button><input type="number" class="numbers" value="1" min="1"><button class="minus">-</button></div></p>
       </li>
-      <li><p class="priceTotal">총 금액 : ₩50,000</p></li>
+      <li><span>총 금액: ₩<span id="totalPrice">50,000</span></span></li>
       <input type="button" id ="productBtn"value="구매하기"><input type="button" id="productBtn2"value="장바구니">
   </ol>
   </div>

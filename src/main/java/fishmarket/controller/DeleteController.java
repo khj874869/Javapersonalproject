@@ -32,7 +32,7 @@ public class DeleteController extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		
 		MemberService service = new MemberService();
-		String memberId = request.getParameter("memberId");
+		String memberId = request.getParameter("member-id");
 		int result = service.deleteMember(memberId);
 		if(result > 0) {
 			

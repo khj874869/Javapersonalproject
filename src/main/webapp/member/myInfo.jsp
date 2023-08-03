@@ -89,7 +89,7 @@
 			</fieldset>
 			
 			<div>
-				<button type="submit">수정하기</button>
+				<button type="submit"><a href="/update.do?member-Id=${member.memberId }">수정하기</a></button>
 				<a href="javascript:void(0)" onclick="checkDelete();">탈퇴하기</a>
 	<!-- 			<button>탈퇴하기</button> -->
 			</div>

@@ -6,6 +6,7 @@ import java.util.List;
 import common.JDBCTemplate;
 import notice.model.dao.NoticeDAO;
 import notice.model.vo.Notice;
+import notice.model.vo.PageData;
 
 public class NoticeService {
 	private NoticeDAO nDao;
@@ -26,11 +27,12 @@ public class NoticeService {
 		jdbctemplate.close(conn);
 		return result;
 	}
-	public List<Notice> selectNoticeList() {
+	public PageData selectNoticeList(int currentPage) {
 		Connection conn = jdbctemplate.createConnection();
-		List<Notice> nList = null;
-		nList = nDao.selectNotice(conn);
-		return nList;
+		List<Notice> nList = nDao.selectNoticeList(conn,currentPage);
+		String pageNavi = nDao.generatePageNavi(currentPage);
+		PageData page = new PageData(nList,pageNavi);
+		return page;
 	}
 	public Notice selectOneByNo(int noticeNo) {
 		Connection conn=jdbctemplate.createConnection();
