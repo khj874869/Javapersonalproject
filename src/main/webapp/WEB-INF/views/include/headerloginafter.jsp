@@ -8,7 +8,7 @@
       <nav class="top-navigation">
         <ul class="top-nav-menu">
           <li><a href="/logout.do">로그아웃</a></li>
-          <li><a href="./notice/notice.jsp">공지사항</a></li>
+          <li><a href="/notice/list.do">공지사항</a></li>
           <li><a href="./point/point.jsp">포인트</a></li>
           <li><a href="./Shipping_Information/shipping_Information.jsp">주문조회</a></li>
           <li><a href="/myinfo.do?memberId=${memberId }"  }>마이페이지</a></li>
