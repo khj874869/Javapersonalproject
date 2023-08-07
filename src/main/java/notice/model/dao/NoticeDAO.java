@@ -130,7 +130,7 @@ public class NoticeDAO {
 
 	public int deleteNotice(Connection conn, int noticeNo) {
 		PreparedStatement ptsmt = null;
-		String query = "delete from NOTICE WHERE NOTICE_NO =?";
+		String query = "delete * from NOTICE WHERE NOTICE_NO =?";
 		int result =0; 
 		try {
 			ptsmt = conn.prepareStatement(query);

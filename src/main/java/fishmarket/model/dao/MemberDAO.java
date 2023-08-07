@@ -63,7 +63,7 @@ public class MemberDAO {
 	public int deleteMember(Connection conn, String memberId) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "DELETE * FROM FISHWEB WHERE USER_ID = ?";
+		String query = "DELETE  FROM FISHWEB WHERE USER_ID = ?";
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, memberId);
