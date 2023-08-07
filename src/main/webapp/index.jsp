@@ -33,7 +33,7 @@
     <div class="product-container">
       <div class="product-card" >
         <div class="product-img">
-          <a href="./product/productHolder.jsp"><img src="/resource/image/sm 스텐 엣지 홀더.png" alt="홀더 1"></a>
+          <a href="/WEB-INF/views/product/productHolder.jsp"><img src="/resource/image/sm 스텐 엣지 홀더.png" alt="홀더 1"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">sm 스텐 엣지 홀더</h3>

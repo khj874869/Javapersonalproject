@@ -33,7 +33,7 @@
     <div class="product-container">
       <div class="product-card" >
         <div class="product-img">
-          <a href="../product/productHolder.jsp"><img src="../resource/image//sm 스텐 엣지 홀더.png" alt="홀더 1"></a>
+          <a href="/WEB-INF/views/product/productHolder.jsp"><img src="../resource/image//sm 스텐 엣지 홀더.png" alt="홀더 1"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">sm 스텐 엣지 홀더</h3>
@@ -44,7 +44,7 @@
       </div>
       <div class="product-card">
         <div class="product-img">
-          <a href="../product/waterTank.jsp"><img src="../resource/image//SM 일체형 수조.png" alt="일체형 수조 "></a>
+          <a href="/WEB-INF/views/product/waterTank.jsp"><img src="../resource/image//SM 일체형 수조.png" alt="일체형 수조 "></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">일체형 수조</h3>
@@ -55,7 +55,7 @@
       </div>
       <div class="product-card">
         <div class="product-img">
-      <a href="../product/filter.jsp"><img src="../resource/image//슈퍼나노스펀지여과기.png" alt="슈퍼나노스펀지여과기"></a>
+      <a href="/WEB-INF/views/product/filter.jsp"><img src="../resource/image//슈퍼나노스펀지여과기.png" alt="슈퍼나노스펀지여과기"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">슈퍼나노스펀지여과기</h3>
@@ -66,7 +66,7 @@
       </div>
       <div class="product-card">
         <div class="product-img">
-          <a href="../product/woodStone.jsp"><img src="../resource/image//목화형 일체형 장식.png" alt="일체형장식"></a>
+          <a href="/WEB-INF/views/product/woodStone.jsp"><img src="../resource/image//목화형 일체형 장식.png" alt="일체형장식"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">일체형목석장식</h3>
@@ -77,7 +77,7 @@
       </div>
       <div class="product-card"class=>
         <div class="product-img">
-          <a href="../product/browa.jsp"><img src="../resource/image//브로와.png" alt="브로와"></a>
+          <a href="/WEB-INF/views/product/browa.jsp"><img src="../resource/image//브로와.png" alt="브로와"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">브로와</h3>
@@ -88,7 +88,7 @@
       </div>
       <div class="product-card">
         <div class="product-img">
-          <a href="../product/filter_media.jsp"><img src="../resource/image//여과제.png" alt="여과제"></a>
+          <a href="/WEB-INF/views/product/filter_media.jsp"><img src="../resource/image//여과제.png" alt="여과제"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">여과제</h3>
@@ -102,7 +102,7 @@
     <div class="product-container">
       <div class="product-card" >
         <div class="product-img">
-          <a href="../product/blue_dragon.jsp"><img src="../resource/image//청룡 아로와나.png" alt="Product 1"></a>
+          <a href="/WEB-INF/views/product/blue_dragon.jsp"><img src="../resource/image//청룡 아로와나.png" alt="Product 1"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">청룡</h3>
@@ -113,7 +113,7 @@
       </div>
       <div class="product-card">
         <div class="product-img">
-          <a href="../product/goldDragonFish.jsp"><img src="../resource/image//금룡아로와나.png" alt="금룡아로와나 "></a>
+          <a href="/WEB-INF/views/product/goldDragonFish.jsp"><img src="../resource/image//금룡아로와나.png" alt="금룡아로와나 "></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">금룡아로와나</h3>
@@ -124,7 +124,7 @@
       </div>
       <div class="product-card">
         <div class="product-img">
-          <a href="../product/redDragon.jsp"><img src="../resource/image//홍룡.png" alt="홍룡"></a>
+          <a href="/WEB-INF/views/product/redDragon.jsp"><img src="../resource/image//홍룡.png" alt="홍룡"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">홍룡</h3>
@@ -135,7 +135,7 @@
       </div>
       <div class="product-card">
         <div class="product-img">
-          <a href="../freshwarter_duck.jsp"><img src="../resource/image//민물가오리.png" alt="민물가오리"></a>
+          <a href=/WEB-INF/views/product/freshwarter_duck.jsp"><img src="../resource/image//민물가오리.png" alt="민물가오리"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">민물가오리</h3>
@@ -146,7 +146,7 @@
       </div>
       <div class="product-card"class=>
         <div class="product-img">
-          <a href="../product/hongWol.jsp"><img src="../resource/image//홍월디스커스.png" alt="홍월디스커스"></a>
+          <a href="/WEB-INF/views/product/hongWol.jsp"><img src="../resource/image//홍월디스커스.png" alt="홍월디스커스"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">홍월디스커스</h3>
@@ -157,7 +157,7 @@
       </div>
       <div class="product-card">
         <div class="product-img">
-          <a href="../product/blue_crest.jsp"><img src="../resource/image//블루크레스트.png" alt="블루크레스트"></a>
+          <a href="/WEB-INF/views/product/blue_crest.jsp"><img src="../resource/image//블루크레스트.png" alt="블루크레스트"></a>
         </div>
         <div class="product-details">
           <h3 class="product-title">블루크레스트</h3>
